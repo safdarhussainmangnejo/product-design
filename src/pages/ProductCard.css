@@ -1,0 +1,55 @@
+.object-fit-contain { object-fit: contain; }
+
+.pcard { perspective: 1200px; }
+
+.pcard-inner {
+  border-radius: 18px;
+  background: #ffffff;
+  position: relative;
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  box-shadow:
+    0 1px 2px rgba(0,0,0,.06),
+    0 6px 12px rgba(0,0,0,.06),
+    0 18px 36px rgba(0,0,0,.05);
+}
+.pcard-inner:hover {
+  transform: translateY(-6px) rotateX(0.6deg) rotateY(-0.6deg) scale(1.01);
+  box-shadow:
+    0 4px 8px rgba(0,0,0,.06),
+    0 14px 28px rgba(0,0,0,.07),
+    0 32px 64px rgba(0,0,0,.08);
+}
+
+.pcard-inner::before {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255,255,255,.25), rgba(255,255,255,0));
+  opacity: 0; transition: opacity .25s ease;
+}
+.pcard-inner:hover::before { opacity: .5; }
+
+.pcard-media {
+  position: relative;
+  background: radial-gradient(120% 120% at 50% 0%,
+    rgba(37, 99, 235, .08) 0%,
+    rgba(148, 163, 184, .10) 40%,
+    rgba(248, 250, 252, 1) 100%);
+}
+
+.pcard-badge {
+  position: absolute; top: .75rem; left: .75rem;
+  border-radius: 999px; padding: .35rem .6rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+.pcard-btn-cta {
+  border-radius: 12px;
+  transform: translateZ(0);
+  transition: transform .1s ease, box-shadow .2s ease, background-color .2s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,.08), inset 0 -2px 0 rgba(255,255,255,.15);
+}
+.pcard-btn-cta:hover { transform: translateY(-1px); }
+.pcard-btn-cta:active { transform: translateY(0); }
+
+.pcard-btn-outline { border-radius: 12px; }
