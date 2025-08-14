@@ -1,0 +1,49 @@
+.productCard {
+  --brand: #2a7de1;
+  --brand-600: #1f63b4;
+  --surface: var(--pc-surface, #ffffff);
+  --surface-2: var(--pc-surface-2, #f6f7f9);
+  --text: var(--pc-text, #0f172a);
+  --muted: var(--pc-muted, #64748b);
+  --border: var(--pc-border, #e5e7eb);
+
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.productCard__media { position: relative; background: var(--surface-2); aspect-ratio: 4/3; }
+.productCard__media img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
+
+.productCard__body { padding: 24px; display: grid; gap: 16px; }
+.productCard__name { margin: 0; color: var(--text); font-size: clamp(1rem, 0.95rem + 0.4vw, 1.25rem); font-weight: 700; }
+.productCard__price { margin: 0; color: var(--text); font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem); font-weight: 800; }
+
+.productCard__variants { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.variantGroup { display: grid; gap: 8px; }
+.variantLabel { font-size: 0.9rem; color: var(--muted); }
+.variantSelect { width: 100%; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); padding: 10px 12px; font-size: 0.95rem; }
+.variantSelect:focus-visible { outline: none; box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand) 35%, transparent); border-color: var(--brand); }
+
+.productCard__actions { display: grid; gap: 12px; }
+.btn { appearance: none; border: none; border-radius: 12px; padding: 12px 14px; font-size: 1rem; font-weight: 800; cursor: pointer; transition: transform .04s ease, background .2s ease, box-shadow .2s ease; color: #fff; background: var(--brand); box-shadow: 0 8px 16px color-mix(in oklab, var(--brand) 25%, transparent); }
+.btn:hover { background: var(--brand-600); transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 4px color-mix(in oklab, var(--brand) 40%, transparent); }
+.btn[disabled], .btn[aria-disabled="true"] { cursor: not-allowed; background: var(--border); color: var(--muted); box-shadow: none; }
+
+.stockLabel { font-size: 0.95rem; color: var(--muted); }
+
+.productCard[data-available="false"] .productCard__media::after {
+  content: 'Out of Stock'; position: absolute; inset: 0; background: rgba(0,0,0,.4); color: #fff; display: grid; place-items: center; font-weight: 800; letter-spacing: .2px;
+}
