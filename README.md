@@ -9,41 +9,37 @@ You can access the project online at: [https://productcard-design.netlify.app/](
 Below are some key screens and features of the project:
 
 ### Homepage
-
-![Homepage](public/assets/Homepage.png)
 The homepage displays featured products and categories in a clean, modern layout.
+![Homepage](public/assets/Homepage.png)
 
-### Product Categories
-
-![Electronics](public/assets/Electronics.png)
+### Product Categories for Electronics
 Electronics category page showing a variety of products.
+![Electronics](public/assets/Electronics.png)
 
-![Jwellery](public/assets/Jwellery.png)
+### Product Categories for Jewellery
 Jewellery category page with product cards and filters.
+![Jwellery](public/assets/Jwellery.png)
 
-![Men Wear](public/assets/Men Wear.png)
+### Product Categories for Men's Wear
 Men's Wear category page with product listings.
+![MenWear](public/assets/MenWear.png)
 
-![Women Wear](public/assets/Women Wear.png)
+### Product Categories for Women's Wear
 Women's Wear category page with product listings.
+![WomenWear](public/assets/WomenWear.png)
 
-### Product Card Example
-
-![Main Product Card](public/assets/main.png.jpg)
-Example of a responsive product card with image, name, price, variants, and add-to-cart button.
-
-### Cart and Checkout
-
-![Cart Page](public/assets/Cart Page.png)
+### Cart Page
 Cart page where users can review and update their selected products.
+![Cart](public/assets/Cart.png)
 
-![Checkout Page](public/assets/Checkout Page.png)
+### Checkout Page
 Checkout page for completing the purchase process.
+![Checkout](public/assets/Checkout.png)
 
 ### About Page
-
-![About Page](public/assets/About.png)
 About page with project and team information.
+![About Page](public/assets/About.png)
+
 
 
 ## Layout Approach
