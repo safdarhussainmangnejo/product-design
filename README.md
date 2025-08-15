@@ -1,4 +1,8 @@
-# Product Card Component
+# Product Card Redesign Project
+
+## Live Demo
+
+You can access the project online at: [https://productcard-design.netlify.app/](https://productcard-design.netlify.app/)
 
 ## Layout Approach
 
@@ -27,9 +31,6 @@ Install dependencies
 ```bash
   npm install
 
-  or
-
-  npm install react-material-ui-carousel --save --legacy-peer-deps
 ```
 
 Start the server
